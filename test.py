@@ -16,7 +16,7 @@ session_id = get_session_id()
 
 if session_id:
     with lock:
-        if len(connected_users) >= 5:  # 限制 5 人
+        if len(connected_users) >= 2:  # 限制 2人
             st.error("目前使用人數已滿，請稍後再試！")
             st.stop()
         else:
